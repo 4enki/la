@@ -4,6 +4,63 @@
   position: fixed
   top: 0
   z-index: 1
+  background-color: transparent
   transition: 0.5s ease
-  &.header-scroll
+  &^&-scroll
+    height: 50px
     background-color: rgb(14, 73, 111)
+    ^&-box
+      padding-top: 0
+    ^&__logo
+      display: block
+      visibility: visible
+  &-box
+    transition: 0.5s ease
+    padding-top: 10px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    align-content: center
+  &__logo
+    display: none
+    visibility: hidden
+  .menu
+    list-style: none
+    margin: 0
+    padding: 0
+    &__item
+      display: inline-block
+      margin-right: 42px
+      padding: 13px 1px 12px 1px
+      &:last-child
+        margin-right: 0
+      a
+        font-family: $LfontFamily
+        color: rgba(255, 255, 255, 0.7)
+        font-size: 12px
+        line-height: 12px
+        font-weight: 500
+        letter-spacing: 0.9px
+        text-decoration: none
+        border-bottom: 0
+      &.active
+        border-bottom: 3px solid #fff
+  &__btn
+    a.btn
+      border-style: solid
+      border-width: 1px
+      border-image-source: linear-gradient(to left, #f2b23d, #fb9d22)
+      border-image-slice: 1
+      font-family: $LfontFamily
+      font-size: 12px
+      font-weight: bold
+      letter-spacing: 0.9px
+      color: #fb9d22
+      padding: 8px 10px
+      &:hover
+        background-image: linear-gradient(to left, #f2b23d, #fb9d22)
+        border-style: solid
+        border-width: 1px
+        border-image-source: linear-gradient(to left, #f2b23d, #fb9d22)
+        border-image-slice: 1
+        color: #07476f
