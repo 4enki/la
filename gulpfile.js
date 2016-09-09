@@ -75,7 +75,7 @@
           templates:   [src + 'templates/**/*.html'],
           scripts:     [src + 'scripts/**/*.js'],
           vendor:      [src + 'scripts/vendor/**/*.js'],
-          styles:      [src + 'styles/**/*.sss'],
+          styles:      [src + 'styles/**/*.sss', src + 'templates/**/*.sss'],
           images:      [src + 'images/**/*.*'],
           fonts:       [src + 'fonts/**/*.*'],
           resources:   [src + 'resources/**/*.*']
