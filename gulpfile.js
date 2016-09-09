@@ -364,7 +364,8 @@
   // Запуск живой сборки
   gulp.task('live', function(cb) {
     return runSequence(
-      ['copy', 'include', 'styles', 'scripts', 'watch'],
+      'copy',
+      ['include', 'styles', 'scripts', 'watch'],
       'server',
       cb
     );
