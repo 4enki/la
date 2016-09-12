@@ -98,6 +98,27 @@
       .link__file-name:hover {
         cursor: help;
       }
+      .foldable__control .foldable__link {
+        position: relative;
+      }
+      .foldable__control .foldable__link:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border: 5px solid;
+        border-right: 4px dashed transparent;
+        border-left: 4px dashed transparent;
+        border-width: 5px 4px 0;
+        margin: 0 -8px 0 0;
+        position: relative;
+        top: 14px;
+        left: 4px;
+        transition: 0s ease;
+      }
+      .foldable__control.unfolded .foldable__link:after {
+        top: -10px;
+        border-width: 0 4px 5px;
+      }
       @media only screen and (min-device-width : 100px) and (max-device-width : 760px) {
         .progress-page {
           padding: 10px 15px;
@@ -154,7 +175,7 @@
               <progress max="100" value="100"></progress>
               <span class="progress_value">100%</span>
             </div>
-            <div class="progress time">&ndash;&ndash;:&ndash;&ndash;:&ndash;&ndash;</div>
+            <div class="progress time">7:29:&ndash;&ndash;</div>
           </li><!-- /.page-list__item -->
 
         </ul>
@@ -164,8 +185,25 @@
       <div class="readme">
       <h2>Исходники и структура папок и файлов</h2>
       <p>Исходный код: <a href="https://bitbucket.org/chenki/la" target="_blank">bitbucket.org/chenki/la</a>. Техническая информация в файле <code>README.md</code>.</p>
+      <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+      <script type="text/javascript">
+      $(document).ready(function() {
+        // спойлер-блок на странице
+        $('.foldable__content').hide()
+          $('.foldable__control').click(function(){
+            $(this).toggleClass("folded").toggleClass("unfolded").next().slideToggle();
+            if($(this).hasClass('folded')) {
+              $('.foldable__link').html('Свернуть стуктуру папок и файлов');
+            }
+            else {
+              $('.foldable__link').html('Показать стуктуру папок и файлов');
+            }
+        });
+        // /спойлер-блок на странице
+      });
+      </script>
       <div class="foldable">
-        <div class="foldable__control"><span class="foldable__link link pseudo">Показать раскрывающийся контент</span></div>
+        <div class="foldable__control"><span class="foldable__link link pseudo">Показать стуктуру папок и файлов</span></div>
           <div class="foldable__content">
 <pre>
 </pre>
@@ -174,6 +212,5 @@
       </div><!-- /.readme -->
 
     </div><!-- /.start-warp -->
-    <include src="blocks/_footer/_footer.html"></include>
   </body>
 </html>
