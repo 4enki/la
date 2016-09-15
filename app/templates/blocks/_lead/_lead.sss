@@ -2,7 +2,7 @@
   height: 100vh
   background-image: inline('bgs/lead-bg.png')
   margin: 0
-  background-attachment: scroll
+  background-attachment: fixed
   background-position: 50% 50%
   background-repeat: no-repeat
   background-size: cover
@@ -26,11 +26,35 @@
       font-size: 13px
       letter-spacing: 0.9px
       color: #ffffff
+      margin-top: 16px
       a
-        font-weight: 900
+        font-weight: 800
         border-bottom: 0
         text-decoration: none
         color: #fff
         &:hover
-          color: #fb9d22
-          border-bottom: 1px solid #fe9f25
+          border-bottom: 1px solid rgba(255, 255, 255, 0.5)
+  &__footer
+    position: absolute
+    left: 50%
+    bottom: -23px
+    padding: 0 10px
+    transform: translateX(-50%)
+    display: block
+    .down
+      width: 86px
+      height: 46px
+      margin: 0 auto
+      display: block
+      position: relative
+      background-color: #f4f8fa
+      &-i
+        display: block
+        width: 19px
+        height: 28px
+        left: center
+        top: center
+        background-image: svg('longarrowdown.svg', '[fill]: #a7bdcb')
+        background-repeat: no-repeat
+        background-position: 50% 50%
+        text-indent: -9999px

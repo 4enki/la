@@ -1,0 +1,116 @@
+.form-big
+  display: block
+  margin-top: 60px
+  .form-group
+    text-align: left
+    display: block
+    .btn
+      width: 166px
+    .error-text
+      position: absolute
+      font-size: 13px
+      letter-spacing: 0.9px
+      color: #ff3131
+      top: 8px
+      left: 189px
+      display: block
+      white-space: nowrap
+    &&.error
+      .form-control
+        border: solid 1px #ff3131
+        &:focus
+          border-color: #fe9f25
+  .form-box
+    display: inline-block
+    margin-bottom: 0
+    vertical-align: top
+    position: relative
+  .form-box-right
+    margin-left: 10px
+  .form-control
+    width: 270px
+    border: solid 1px #dfdfdf
+  .form-group-box
+    margin-bottom: 10px
+  .form-group-text
+    display: flex
+    textarea.form-control
+      width: 330px
+      min-height: 117px
+      max-height: 250px
+      display: block
+      padding: 12px 14px
+      resize: vertical
+  .form-box-line
+    margin-bottom: 10px
+    .form-group
+      display: inline-block
+      margin-bottom: 0
+      vertical-align: middle
+      &&-last
+        margin-left: -4px
+    .form-control
+      width: 122px
+.form-inline
+  .form-group
+    display: inline-block
+    margin-bottom: 0
+    vertical-align: middle
+    &&-last
+      margin-left: -4px
+      border-left: 1px solid #dfdfdf
+    + .btn
+      margin-left: 10px
+  .form-control
+    width: 150px
+.form-group
+  position: relative
+  &__icon
+    size: 20px 21px
+    background-color: #fff
+    background-repeat: no-repeat
+    background-image: svg('tagonthemap.svg')
+    background-position: 50% 50%
+    display: block
+    text-indent: -9999px
+    position: absolute
+    top: center
+    right: 10px
+.form-control
+  display: block
+  height: 39px
+  padding: 0 12px 0 12px
+  line-height: 1.42857143
+  background-color: #fff
+  background-image: none
+  border: 1px solid #fff
+  border-radius: 0
+  transition: 0.5s ease0
+  font-family: $LfontFamily
+  font-size: 13px
+  color: #0e496f
+  letter-spacing: 0.9px
+  &:focus
+    border-color: #fe9f25
+.btn
+  display: inline-block
+  padding: 8px 12px 9px 12px
+  margin-bottom: 0
+  font-size: 14px
+  font-weight: bold
+  line-height: 1.42857143
+  letter-spacing: 1px
+  text-align: center
+  white-space: nowrap
+  vertical-align: middle
+  touch-action: manipulation
+  cursor: pointer
+  user-select: none
+  background-image: linear-gradient(to left, #f2b23d, #fb9d22)
+  border: 1px solid transparent
+  border-radius: 0
+  font-family: $LfontFamily
+  color: #fff
+  transition: 0.5s ease
+  &:hover
+    background-image: linear-gradient(to left, #e38c00, #fb9d22)

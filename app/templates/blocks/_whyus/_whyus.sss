@@ -15,8 +15,21 @@
     margin-bottom: 10px
     background-color: #ffffff
     box-shadow: 0 2px 3px 0 rgba(203, 203, 203, 0.5)
+    &--hover
+      ^&-box
+        background: red inline('why/hover/2__hover.png')
+        background-attachment: scroll
+        background-position: center center
+        background-repeat: no-repeat
+        background-size: 320px 195px
+        position: relative
+        h3,
+        p
+          color: #ffffff
     &-box
       padding: 29px 40px
+    .why-head
+      margin-bottom: 15px
     h3
       font-family: $LfontFamily
       font-size: 17px

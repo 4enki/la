@@ -8,12 +8,12 @@
   transition: 0.5s ease
   &^&-scroll
     height: 50px
-    background-color: rgb(14, 73, 111)
+    background-color: rgba(14, 73, 111,.9)
     ^&-box
       padding-top: 0
-    ^&__logo
-      display: block
-      visibility: visible
+    // ^&__logo
+    //   display: block
+    //   visibility: visible
   &-box
     transition: 0.5s ease
     padding-top: 10px
@@ -46,7 +46,7 @@
       &.active
         border-bottom: 3px solid #fff
   &__btn
-    a.btn
+    a.btn-link
       border-style: solid
       border-width: 1px
       border-image-source: linear-gradient(to left, #f2b23d, #fb9d22)
