@@ -48,6 +48,7 @@
       display: block
       position: relative
       background-color: #f4f8fa
+      transition: 0.3s ease
       &-i
         display: block
         width: 19px
@@ -58,3 +59,7 @@
         background-repeat: no-repeat
         background-position: 50% 50%
         text-indent: -9999px
+        transition: 0.3s ease
+      &:hover
+        .down-i
+          background-image: svg('longarrowdown.svg', '[fill]: #fb9d22')

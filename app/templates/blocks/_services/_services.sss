@@ -15,9 +15,12 @@
     margin-bottom: 10px
     background-color: #ffffff
     box-shadow: 0 2px 3px 0 rgba(203, 203, 203, 0.5)
-    &-box
-      padding: 29px 40px
-      text-align: left
+    ^&-box
+      margin: 0
+      padding: 0
+      display: flex
+      align-items: flex-start
+      align-content: flex-start
       h3
         font-family: $LfontFamily
         font-size: 17px
@@ -26,9 +29,26 @@
         letter-spacing: 0.6px
         text-align: left
         color: #0e496f
+        margin-bottom: 10px
       p
         font-family: $LfontFamily
         font-size: 14px
         letter-spacing: 0.4px
         text-align: left
         color: #336f96
+      &__description
+        padding: 40px 28px 29px 28px
+        text-align: left
+        flex: 1
+      &__img
+        width: 160px
+        height: 180px
+        margin: auto
+        display: block
+        img
+          object-fit: cover
+          display: block
+          padding: 0
+          margin: 0
+          width: 160px
+          height: 180px

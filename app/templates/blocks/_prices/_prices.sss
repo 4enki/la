@@ -11,3 +11,71 @@
   background-size: cover
   position: relative
   padding-top: 80px
+  &-list
+    padding-top: 60px
+    margin-bottom: 40px
+    display: block
+    display: flex
+    flex: 1 1 auto
+    flex-wrap: wrap
+  &__item
+    lost-column: 1/3 3 10px
+    display: block
+    margin-bottom: 10px
+    background-color: #ffffff
+    object-fit: contain
+    ^&-box
+      margin: 0
+      padding: 35px 0 0 28px
+      position: relative
+      text-align: left
+      &__info
+        position: relative
+        z-index: 1
+        .btn
+          width: 126px
+      &__img
+        position: absolute
+        right: 0
+        top: 0
+        z-index: 0
+.cost
+  &__box
+    font-family: $MfontFamily
+    font-size: 24px
+    font-weight: 400
+    line-height: 1
+    letter-spacing: 0.8px
+    text-align: left
+    color: #0e496f
+    margin-bottom: 7px
+    margin-top: 15px
+    ^&-d
+      color: #fb9d22
+    ^&-n
+      font-size: 34px
+      line-height: 0.7
+      letter-spacing: 1.2px
+      color: #fb9d22
+  &__header
+    font-family: $MfontFamily
+    font-size: 14px
+    font-weight: 400
+    line-height: 1.8
+    letter-spacing: 0.5px
+    color: #0e496f
+    margin-bottom: 20px
+.human
+  display: block
+  &__i
+    display: inline-block
+    margin-right: 2px
+    width: 12px
+    height: 20px
+    background-image: svg('human.svg', '[fill]: #0E496F')
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    text-indent: -9999px
+    transition: 0.3s ease
+    &:last-child
+      margin-right: 0
