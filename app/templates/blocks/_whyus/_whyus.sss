@@ -10,24 +10,37 @@
     flex: 1 1 auto
     flex-wrap: wrap
   &__item
-    lost-column: 1/3 3 10px
+    lost-column: 1/3 3 11px
     display: block
     margin-bottom: 10px
     background-color: #ffffff
     box-shadow: 0 2px 3px 0 rgba(203, 203, 203, 0.5)
-    &--hover
+    &:hover
+      transition: 0.3s ease
       ^&-box
-        background: transparent inline('why/hover/2__hover.png')
         background-attachment: scroll
-        background-position: center center
+        background-position: 50% 50%
         background-repeat: no-repeat
-        background-size: 320px 195px
+        background-size: cover
         position: relative
         h3,
         p
           color: #ffffff
+        &&-1
+          background: transparent inline('why/hover/1__h.png')
+        &&-2
+          background: transparent inline('why/hover/2__h.png')
+        &&-3
+          background: transparent inline('why/hover/3__h.png')
+        &&-4
+          background: transparent inline('why/hover/4__h.png')
+        &&-5
+          background: transparent inline('why/hover/5__h.png')
+        &&-6
+          background: transparent inline('why/hover/6__h.png')
     &-box
       padding: 29px 40px
+      transition: 0.3s ease
     .why-head
       margin-bottom: 15px
     h3

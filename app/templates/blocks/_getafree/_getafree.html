@@ -2,25 +2,26 @@
   <div class="box">
     <h2>GET A FREE QUOTE</h2>
     <p>GET MOVING COMPANY RATES FROM CALSTATE <br>PROFESSIONAL MOVERS TODAY.</p>
-    <form class="form-big" action="index.html" method="post">
+    <form class="form-big _fs" action="mail.php" method="post">
       <div class="form-box">
         <div class="form-group form-group-box">
-          <input type="text" class="form-control" placeholder="Full name">
+          <input type="text" class="form-control" name="fname" placeholder="Full name">
         </div>
         <div class="form-group error form-group-box">
-          <input type="text" class="form-control" placeholder="Phone or email">
+          <input type="text" class="form-control" name="phormail" placeholder="Phone or email">
         </div>
         <div class="form-box-line">
           <div class="form-group error">
-            <input type="text" class="form-control" placeholder="Zipe code from">
+            <input type="text" class="form-control _zip" name="zipf" placeholder="Zipe code from">
             <span class="form-group__icon">Zipe code from</span>
           </div>
           <div class="form-group error form-group-last">
-            <input type="text" class="form-control" placeholder="Zipe code to">
+            <input type="text" class="form-control _zip" name="zipt" placeholder="Zipe code to">
             <span class="form-group__icon">Zipe code to</span>
           </div>
         </div>
         <div class="form-group">
+          <input type="hidden" name="hidden" value="GET A FREE QUOTE" class="form-hidden">
           <button type="submit" class="btn">SUBMIT NOW</button>
           <div class="error-text">Fill in required fields!</div>
         </div>
