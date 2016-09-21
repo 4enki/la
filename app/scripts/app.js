@@ -12,19 +12,27 @@ $(document).ready(function() {
   });
   // /подсвечиваем ссылки с одинаковым адресом
 
-  // подсвечиваем мини-шапку при скролле
-  $(document).scroll(function(evt) {
-    evt.preventDefault();
-    if($(document).scrollTop()>2){
-      $('._header').addClass('header-scroll');
-    } else {
-      $('._header').removeClass('header-scroll');
-    }
-    return false;
+  // поведение шапки при скролле
+  $(function() {
+    var header = $("._header");
+    $(window).scroll(function(scrlevt) {
+      scrlevt.preventDefault();
+      var scroll = $(window).scrollTop();
+
+      if (scroll > 2) {
+        header.removeClass('header-scroll-off').addClass("header-scroll");
+      } else {
+        header.removeClass("header-scroll").addClass('header-scroll-off');
+      }
+
+      return false;
+    });
   });
+  // /поведение шапки при скролле
 
+  // маска для полей zip-кодов
   $('._zip').inputmask("99999", {"placeholder": "_____"});
-
+  // /маска для полей zip-кодов
 
   function clear_form() {
     $("input[type='text']").val("");
