@@ -36,93 +36,50 @@ $(document).ready(function() {
 
   // шпионское меню со скроллом
   var lastId,
-    topMenu = $("#top-menu"),
-    topMenuHeight = topMenu.outerHeight()+0,
-    menuItems = topMenu.find("a"),
-    scrollItems = menuItems.map(function(){
-      var item = $($(this).attr("href"));
-      if (item.length) { return item; }
-    });
+      topMenu = $("#top-menu"),
+      topMenuHeight = topMenu.outerHeight()+0,
+      menuItems = topMenu.find("a"),
+      scrollItems = menuItems.map(function(){
+        var item = $($(this).attr("href"));
+        if (item.length) { return item; }
+      });
+
   menuItems.click(function(e){
     var href = $(this).attr("href"),
-      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
-    $('html, body').stop().animate({
-      scrollTop: offsetTop
-    }, 300);
+        offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+    $('html, body').stop().animate({scrollTop: offsetTop}, 300);
     e.preventDefault();
   });
+
   $(window).scroll(function(){
-   var fromTop = $(this).scrollTop()+topMenuHeight;
-   var cur = scrollItems.map(function(){
-     if ($(this).offset().top < fromTop)
-       return this;
-   });
-   cur = cur[cur.length-1];
-   var id = cur && cur.length ? cur[0].id : "";
-   if (lastId !== id) {
-     lastId = id;
-     menuItems
-       .parent().removeClass("active")
-       .end().filter("[href=#"+id+"]").parent().addClass("active");
-   }
+    var fromTop = $(this).scrollTop()+topMenuHeight;
+    var cur = scrollItems.map(function(){
+      if ($(this).offset().top < fromTop)
+      return this;
+    });
+    cur = cur[cur.length-1];
+    var id = cur && cur.length ? cur[0].id : "";
+      if (lastId !== id) {
+      lastId = id;
+      menuItems
+        .parent().removeClass("active")
+        .end().filter("[href=#"+id+"]").parent().addClass("active");
+      }
   });
   // /шпионское меню со скроллом
 
-  	$('._go-to').on('click', function (event) {
-		event.preventDefault();
-		var id  = $(this).attr('href'),
-			top = $(id).offset().top;
-		$('body,html').animate({scrollTop: top}, 310);
-	});
+  $('._go-to').on('click', function (event) {
+    event.preventDefault();
+    var id  = $(this).attr('href'),
+    top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 310);
+  });
 
 
   function clear_form() {
     $('input[type="text"]').val("");
     $("textarea").val('');
   };
-
-  var emailCount = 0;
-
-  function email_validate(x) {
-    var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
-    if(pattern.test(x.val())){
-      x.removeClass('error');
-      emailCount=0;
-    }
-    else if (x.val() == 0) {
-      x.removeClass('error');
-      emailCount=0;
-    }
-    else {
-      x.addClass('error');
-      emailCount=1;
-    }
-    console.log(emailCount);
-  };
-
-  $('input[name="email"]').blur(function() {
-    email_validate($(this));
-  });
-
-  $('input[name="email"]').keypress(function(e){
-    if(e.keyCode==13){
-      email_validate($(this));
-    }
-  });
-
-  $('input[name="phone"]').blur(function() {
-    var phone =  $(this).val();
-    var index =  phone.indexOf('_');
-    if(phone.length >= 6 && index == -1) {
-      $(this).removeClass('error');
-    }
-    else if (phone == 0) {
-      $(this).removeClass('error');
-    }
-    else {
-      $(this).addClass('error');
-    }
-  });
 
   $('._fs').submit(function(){
   var formName = $(this).find('input[name="name"]').val();
@@ -156,5 +113,14 @@ $(document).ready(function() {
   //}
   return false;
   });
+
+
+		$('.form-big').validate();
+
+
+
+
+
+
 
 });
