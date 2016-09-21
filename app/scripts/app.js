@@ -77,7 +77,8 @@ $(document).ready(function() {
 
 
   function clear_form() {
-    $("input[type='text']").val("");
+    $('input[type="text"]').val("");
+    $("textarea").val('');
   };
 
   var emailCount = 0;
@@ -124,23 +125,23 @@ $(document).ready(function() {
   });
 
   $('._fs').submit(function(){
-  var name = $(this).find('input[name="fname"]').val();
-  var phone =  $(this).find('input[name="phormail"]').val();
-  var index =  phone.indexOf('_');
-  var indexstring =  phone.indexOf('е');
-  var companyName = $(this).find('input[name="zipf"]').val();
-  var formDate = $(this).find('input[name="zipt"]').val();
-  var formName = $(this).find('input[name="hidden"]').val();
-  if(phone.length >= 6 && index == -1 && emailCount == 0 && indexstring == -1) {
+  var formName = $(this).find('input[name="name"]').val();
+  var formContact =  $(this).find('input[name="contact"]').val();
+  var formZipfrom = $(this).find('input[name="zipform"]').val();
+  var formZipto = $(this).find('input[name="zipto"]').val();
+  var formType = $(this).find('input[name="hidden"]').val();
+  var formMessage = $(this).find('textarea[name="message"]').val();
+  //if(phone.length >= 6 && index == -1 && emailCount == 0 && indexstring == -1) {
     $.ajax({
       type: "POST",
       url: "mail.php",
       data:{
-        "name":name,
-        "phone":phone,
-        "companyName":companyName,
-        "formDate":formDate,
-        "formName":formName
+        "formName":formName,
+        "formContact":formContact,
+        "formZipfrom":formZipfrom,
+        "formZipto":formZipto,
+        "formType":formType,
+        "formMessage":formMessage
       },
       success: function() {
         clear_form();
@@ -149,10 +150,10 @@ $(document).ready(function() {
         $('input[name="name"], input[name="phone"]').removeClass('error');
       }
     });
-  }
-  else {
-    $(this).find('input[name="phone"]').addClass('error');
-  }
+  //}
+  //else {
+   // $(this).find('input[name="phone"]').addClass('error');
+  //}
   return false;
   });
 

@@ -5,11 +5,11 @@
     <div class="wow zoomIn" data-wow-delay=".5s">
       <form class="form-inline _fs" action="mail.php" method="post">
         <div class="form-group">
-          <input type="text" class="form-control _zip" name="zipf" placeholder="Zipe code From">
+          <input type="text" class="form-control _zip" name="zipform" placeholder="Zipe code From" onKeyUp="javascript:document.getElementById('input_2').value = this.value;">
           <span class="form-group__icon">Zipe code From</span>
         </div>
         <div class="form-group form-group-last">
-          <input type="text" class="form-control _zip" name="zipt" placeholder="Zipe code To">
+          <input type="text" class="form-control _zip" name="zipto" placeholder="Zipe code To">
           <span class="form-group__icon">Zipe code To</span>
         </div>
         <input type="hidden" name="hidden" value="LEAD FORM" class="form-hidden">

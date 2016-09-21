@@ -8,30 +8,30 @@
       <form class="form-big _fs" action="mail.php" method="post">
         <div class="form-box">
           <div class="form-group form-group-box">
-            <input type="text" class="form-control" name="fname" placeholder="Full name">
+            <input type="text" class="form-control" name="name" placeholder="Full name">
           </div>
-          <div class="form-group error form-group-box">
-            <input type="text" class="form-control" name="phormail" placeholder="Phone or email">
+          <div class="form-group form-group-box">
+            <input type="text" class="form-control" name="contact" placeholder="Phone or email">
           </div>
           <div class="form-box-line">
-            <div class="form-group error">
-              <input type="text" class="form-control _zip" name="zipf" placeholder="Zipe code from">
+            <div class="form-group">
+              <input type="text" class="form-control _zip" name="zipform" id="input_2" placeholder="Zipe code from">
               <span class="form-group__icon">Zipe code from</span>
             </div>
-            <div class="form-group error form-group-last">
-              <input type="text" class="form-control _zip" name="zipt" placeholder="Zipe code to">
+            <div class="form-group form-group-last">
+              <input type="text" class="form-control _zip" name="zipto" placeholder="Zipe code to">
               <span class="form-group__icon">Zipe code to</span>
             </div>
           </div>
           <div class="form-group">
             <input type="hidden" name="hidden" value="GET A FREE QUOTE" class="form-hidden">
             <button type="submit" class="btn">SUBMIT NOW</button>
-            <div class="error-text">Fill in required fields!</div>
+            <div class="error-text" style="display: none;">Fill in required fields!</div>
           </div>
         </div>
         <div class="form-box form-box-text">
           <div class="form-group-text">
-            <textarea name="name" class="form-control" rows="8" cols="40" placeholder="Your massage"></textarea>
+            <textarea name="message" class="form-control" rows="8" cols="40" placeholder="Your message"></textarea>
           </div>
         </div>
       </form>
