@@ -65,3 +65,43 @@
         border-image-source: linear-gradient(to left, #f2b23d, #fb9d22)
         border-image-slice: 1
         color: #07476f
+  &__close
+    display: none
+    visibility: hidden
+    size: 32px
+    position: absolute
+    right: 10px
+    top: 19px
+    .i-corss
+      background-image: svg('cross.svg', '[fill]: #ffffff')
+      background-position: 50% 50%
+      text-indent: -9999px
+      background-repeat: no-repeat
+      size: 24px
+      display: block
+@media screen and (max-width: 600px)
+  .header
+    height: 100vh
+    background: rgba(18, 50, 71,.95)
+    position: absolute
+    top: 0
+    left: 0
+    &-box
+      display: block
+      top: center
+      left: center
+    .menu
+      margin-bottom: 100px
+      &__item
+        display: block
+        margin-right: 0
+        text-align: left
+        margin-bottom: 21px
+        padding: 0
+        a
+          color: #fff
+        &.active
+          border-bottom: 3px solid transparent
+    &__close
+      display: block
+      visibility: visible

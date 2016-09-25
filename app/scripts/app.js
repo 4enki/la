@@ -68,13 +68,26 @@ $(document).ready(function() {
   });
   // /шпионское меню со скроллом
 
+  // помогаем ссылкам с якорями плавно скролиться
   $('._go-to').on('click', function (event) {
     event.preventDefault();
     var id  = $(this).attr('href'),
     top = $(id).offset().top;
     $('body,html').animate({scrollTop: top}, 310);
   });
+  // /помогаем ссылкам с якорями плавно скролиться
 
+  // когда очень нужно скролить вверх
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 0) {
+      $('._scroller').fadeIn();
+    } else {
+      $('._scroller').fadeOut();
+    }
+  });
+  $('._scroller').click(function () {
+    $('body,html').animate({scrollTop: 0}, 401); return false;
+  });
 
   function clear_form() {
     $('input[type="text"]').val("");
