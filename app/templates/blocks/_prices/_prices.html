@@ -7,7 +7,7 @@
 
     <div class="tabs" role="tabs">
       <div class="tabs__content">
-        <div class="tabs__content-item tabs-local active">
+        <div class="tabs__content-item tabs-local">
 
           <div class="prices-list">
 
@@ -24,7 +24,7 @@
                     </div>
                     <div class="cost__header">2 MOVERS & TRUCK</div>
                   </div>
-                  <a href="" class="btn">BOOK NOW</a>
+                  <a href="#p-get" class="btn _go-to">BOOK NOW</a>
                 </div><!-- /.prices-box__info -->
                 <div class="prices-box__img">
                   <img src="assets/images/prices/truck.png" alt="">
@@ -46,7 +46,7 @@
                     </div>
                     <div class="cost__header">3 MOVERS & TRUCK</div>
                   </div>
-                  <a href="" class="btn">BOOK NOW</a>
+                  <a href="#p-get" class="btn _go-to">BOOK NOW</a>
                 </div><!-- /.prices-box__info -->
                 <div class="prices-box__img">
                   <img src="assets/images/prices/truck.png" alt="">
@@ -69,7 +69,7 @@
                     </div>
                     <div class="cost__header">4 MOVERS & TRUCK</div>
                   </div>
-                  <a href="" class="btn">BOOK NOW</a>
+                  <a href="#p-get" class="btn _go-to">BOOK NOW</a>
                 </div><!-- /.prices-box__info -->
                 <div class="prices-box__img">
                   <img src="assets/images/prices/truck.png" alt="">
@@ -83,55 +83,109 @@
 
         <div class="tabs__content-item tabs-long">
 
-          <div class="long">
-            <div class="long__info">
-              <p>Long distance moving is the most challenging of all <br> moves. There are always construction projects and <br> other factors at play with these types of moves.</p>
-              <p><img src="assets/images/prices/long.png" alt=""></p>
-            </div>
-            <div class="long__form">
-              <h3><span>GET A FREE QUOTE</span> FOR LONG DISTANCE MOVING</h3>
-              <form class="form-big _fs" action="mail.php" method="post">
-                <div class="form-box">
-                  <div class="form-group form-group-box">
-                    <input type="text" class="form-control" name="name" placeholder="Full name" required>
-                  </div>
-                  <div class="form-group form-group-box">
-                    <input type="text" class="form-control" name="contact" placeholder="Phone or email" required>
-                  </div>
-                  <div class="form-box-line">
+          <div class="long-list">
+
+            <div class="long__item long__item--info wow bounceIn" data-wow-delay=".3s">
+              <div class="long__info">
+                <p>Long distance moving is the most challenging of all <br> moves. There are always construction projects and <br> other factors at play with these types of moves.</p>
+                <p class="img"><img src="assets/images/prices/long.png" alt=""></p>
+              </div>
+            </div><!-- /.long__item -->
+
+            <div class="long__item long__item--form wow bounceIn" data-wow-delay=".3s">
+              <div class="long__form">
+                <h3><span>GET A FREE QUOTE</span> FOR LONG DISTANCE MOVING</h3>
+                <form class="form-big _fs1" action="mail.php" method="post">
+                  <div class="form-box">
+                    <div class="form-group form-group-box">
+                      <input type="text" class="form-control" name="name" placeholder="Full name" required>
+                    </div>
+                    <div class="form-group form-group-box">
+                      <input type="text" class="form-control" name="contact" placeholder="Phone or email" required>
+                    </div>
+                    <div class="form-box-line">
+                      <div class="form-group">
+                        <input type="text" class="form-control _zip" name="zipform" maxlength="5" placeholder="Zipe code from" required>
+                        <span class="form-group__icon">Zipe code from</span>
+                      </div>
+                      <div class="form-group form-group-last">
+                        <input type="text" class="form-control _zip" name="zipto" maxlength="5" placeholder="Zipe code to" required>
+                        <span class="form-group__icon">Zipe code to</span>
+                      </div>
+                    </div>
                     <div class="form-group">
-                      <input type="text" class="form-control _zip" name="zipform" placeholder="Zipe code from" required>
-                      <span class="form-group__icon">Zipe code from</span>
-                    </div>
-                    <div class="form-group form-group-last">
-                      <input type="text" class="form-control _zip" name="zipto" placeholder="Zipe code to" required>
-                      <span class="form-group__icon">Zipe code to</span>
+                      <input type="hidden" name="hidden" value="LONG DISTANCE" class="form-hidden">
+                      <button type="submit" class="btn">SUBMIT NOW</button>
+                      <div class="error-text" style="display: none;">Fill in required fields!</div>
                     </div>
                   </div>
-                  <div class="form-group">
-                    <input type="hidden" name="hidden" value="LONG DISTANCE" class="form-hidden">
-                    <button type="submit" class="btn">SUBMIT NOW</button>
-                    <div class="error-text" style="display: none;">Fill in required fields!</div>
+                  <div class="form-box form-box-text">
+                    <div class="form-group-text">
+                      <textarea name="message" class="form-control" rows="8" cols="40" placeholder="Your message"></textarea>
+                    </div>
                   </div>
-                </div>
-                <div class="form-box form-box-text">
-                  <div class="form-group-text">
-                    <textarea name="message" class="form-control" rows="8" cols="40" placeholder="Your message"></textarea>
-                  </div>
-                </div>
-              </form><!-- /.form-big -->
-            </div>
-          </div>
+                </form><!-- /.form-big -->
+              </div><!-- /.long__form -->
+            </div><!-- /.long__item -->
+
+          </div><!-- /.long-list -->
 
         </div><!-- /.tabs__content-item -->
 
-        <div class="tabs__content-item tabs-storage">GET A FREE ESTIMATE FOR STORAGE OF YOUR STUFF.</div><!-- /.tabs__content-item -->
+        <div class="tabs__content-item tabs-storage">
+          <div class="storage-list">
+
+            <div class="storage__item storage__item--info wow bounceIn" data-wow-delay=".3s">
+              <div class="storage__info">
+                <p>Don't have a storage yet? No problem, we've got your back! CalState Moving has affordable storage vaults available at our warehouse. </p>
+                <p class="img"><img src="assets/images/prices/storage.png" alt=""></p>
+              </div>
+            </div><!-- /.long__item -->
+
+            <div class="storage__item storage__item--form wow bounceIn" data-wow-delay=".3s">
+              <div class="storage__form">
+                <h3><span>GET A FREE ESTIMATE</span> FOR STORAGE OF YOUR STUFF</h3>
+                <form class="form-big _fs2" action="mail.php" method="post">
+                  <div class="form-box">
+                    <div class="form-group form-group-box">
+                      <input type="text" class="form-control" name="name" placeholder="Full name" required>
+                    </div>
+                    <div class="form-group form-group-box">
+                      <input type="text" class="form-control" name="contact" placeholder="Phone or email" required>
+                    </div>
+                    <div class="form-box-line">
+                      <div class="form-group">
+                        <input type="text" class="form-control _zip" name="zipform" maxlength="5" placeholder="Zipe code from" required>
+                        <span class="form-group__icon">Zipe code from</span>
+                      </div>
+                      <div class="form-group form-group-last">
+                        <input type="text" class="form-control _zip" name="zipto" maxlength="5" placeholder="Zipe code to" required>
+                        <span class="form-group__icon">Zipe code to</span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <input type="hidden" name="hidden" value="STORAGE SERVICE" class="form-hidden">
+                      <button type="submit" class="btn">SUBMIT NOW</button>
+                      <div class="error-text" style="display: none;">Fill in required fields!</div>
+                    </div>
+                  </div>
+                  <div class="form-box form-box-text">
+                    <div class="form-group-text">
+                      <textarea name="message" class="form-control" rows="8" cols="40" placeholder="Your message"></textarea>
+                    </div>
+                  </div>
+                </form><!-- /.form-big -->
+              </div><!-- /.storage__form -->
+            </div><!-- /.storage__item -->
+
+          </div><!-- /.storage-list -->
+        </div><!-- /.tabs__content-item -->
 
       </div><!-- /.tabs__content -->
 
       <ul class="tabs__menu">
         <li class="tabs__menu-item active">LOCAL MOVING</li>
-        <li class="tabs__menu-item">LONG DISTANCE</li>
+        <li class="tabs__menu-item ">LONG DISTANCE</li>
         <li class="tabs__menu-item">STORAGE SERVICE</li>
       </ul>
     </div><!-- /.tabs -->

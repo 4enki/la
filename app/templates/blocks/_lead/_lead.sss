@@ -63,3 +63,28 @@
       &:hover
         .down-i
           background-image: svg('longarrowdown.svg', '[fill]: #fb9d22')
+
+@media screen and (max-width: 800px)
+  .lead
+    background-position: 50% 50%
+    background-size: cover
+    background-attachment: scroll
+    &__wrapper
+      h1
+        font-size: 30px
+        line-height: 1.1
+        letter-spacing: 0.9px
+      img
+        width: 108px
+        height: 91px
+      p
+        a
+          display: block
+    .form-group,
+    &__footer
+      display: none
+      visibility: hidden
+    .btn-lead
+      width: 180px
+      height: 50px
+      line-height: 3.428571

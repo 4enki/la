@@ -11,9 +11,12 @@
     background-color: rgba(14, 73, 111,.9)
     ^&-box
       padding-top: 0
-    // ^&__logo
-    //   display: block
-    //   visibility: visible
+    ^&__logo
+      img
+        visibility: visible
+        opacity: 1
+        height: 39px
+        transition: all .4s ease-in-out
   &-box
     transition: 0.5s ease
     padding-top: 10px
@@ -22,8 +25,12 @@
     align-items: center
     align-content: center
   &__logo
-    display: none
-    visibility: hidden
+    margin-top: 3px
+    img
+      opacity: 0
+      visibility: hidden
+      transition: all .4s ease-in-out
+      height: 0
   .menu
     list-style: none
     margin: 0
@@ -72,24 +79,72 @@
     position: absolute
     right: 10px
     top: 19px
-    .i-corss
-      background-image: svg('cross.svg', '[fill]: #ffffff')
-      background-position: 50% 50%
-      text-indent: -9999px
-      background-repeat: no-repeat
-      size: 24px
-      display: block
+    .close-icon
+      position: relative
+      display:  inline-block
+      width: 30px
+      height: 30px
+      margin: 0
+      border-bottom: 0
+      span
+        margin: 0 auto
+        position: relative
+        top: 12px
+      span:before,
+      span:after
+        position: absolute
+        content: ''
+      span,
+      span:before,
+      span:after
+        width: 30px
+        height: 2px
+        background-color: #fff
+        display: block
+      span:before
+        margin-top: -12px
+      span:after
+        margin-top: 12px
+      span
+        transition-duration: 0s
+        transition-delay: 0.2s
+      &:hover span
+        background-color: rgba(0,0,0,0.0)
+        transition-delay: 0.2s
+      span:before
+        transition-property: margin, transform
+        transition-duration: 0.2s
+        transition-delay: 0.2s, 0s
+      &:hover span:before
+        margin-top: 0
+        transform: rotate(45deg)
+        transition-delay: 0s, 0.2s
+      span:after
+        transition-property: margin, transform
+        transition-duration: 0.2s
+        transition-delay: 0.2s, 0s
+      &:hover span:after
+        margin-top: 0
+        transform: rotate(-45deg)
+        transition-delay: 0s, 0.2s
 @media screen and (max-width: 600px)
   .header
     height: 100vh
-    background: rgba(18, 50, 71,.95)
+    background: transparent
     position: absolute
     top: 0
     left: 0
+    &&-ok
+      background: rgba(18, 50, 71,.95)
     &-box
-      display: block
+      display: none
       top: center
       left: center
+    &__logo,
+    & img
+      display: none
+      visibility: hidden
+      transition: 0
     .menu
       margin-bottom: 100px
       &__item

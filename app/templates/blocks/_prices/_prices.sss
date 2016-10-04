@@ -81,11 +81,20 @@
     &:last-child
       margin-right: 0
 .long
-  display: block
-  display: flex
-  flex-wrap: wrap
-  width: 920px
-  padding-top: 60px
+  &-list
+    padding-top: 60px
+    display: block
+    display: flex
+    flex: 1 1 auto
+    flex-wrap: wrap
+    width: 920px
+  &__item
+    display: inline-block
+    vertical-align: top
+    &&--info
+      width: 400px
+    &&--form
+      width: 505px
   &__info
     font-family: $LfontFamily
     font-size: 16px
@@ -94,14 +103,17 @@
     color: #ffffff
     text-align: left
     margin-right: 10px
+    margin-top: 30px
     p
       text-align: left
       margin-bottom: 20px
+    p.img
+      padding-left: 15px
   &__form
     .form-big
       margin-top: 10px
       .form-group-text textarea.form-control
-        width: 193px
+        width: 170px
     h3
       font-family: $LfontFamily
       font-size: 16px
@@ -112,6 +124,51 @@
       text-align: left
       span
         color: #fb9d22
+.storage
+  &-list
+    padding-top: 60px
+    display: block
+    display: flex
+    flex: 1 1 auto
+    flex-wrap: wrap
+    width: 920px
+  &__item
+    display: inline-block
+    vertical-align: top
+    &&--info
+      width: 400px
+    &&--form
+      width: 505px
+  &__info
+    font-family: $LfontFamily
+    font-size: 16px
+    line-height: 1.5
+    letter-spacing: 0.5px
+    color: #ffffff
+    text-align: left
+    margin-right: 10px
+    margin-top: 30px
+    p
+      text-align: left
+      margin-bottom: 20px
+    p.img
+      padding-left: 15px
+  &__form
+    .form-big
+      margin-top: 10px
+      .form-group-text textarea.form-control
+        width: 170px
+    h3
+      font-family: $LfontFamily
+      font-size: 16px
+      font-weight: bold
+      line-height: 1.5
+      letter-spacing: 0.5px
+      color: #ffffff
+      text-align: left
+      span
+        color: #fb9d22
+
 .tabs__menu
   list-style-type: none
   margin-bottom: 20px
@@ -122,7 +179,7 @@
     margin-bottom: 0.5em
     line-height: 1.5
     display: inline-block
-    margin-right: 23px
+    margin-right: 20px
     font-family: $LfontFamily
     font-size: 16px
     font-weight: 900
@@ -130,6 +187,9 @@
     letter-spacing: 0.5px
     text-align: center
     color: #ffffff
+    padding: 1px 5px 2px 5px
+    &:hover
+      cursor: pointer
     &:last-child
       margin-right: 0
     &.active

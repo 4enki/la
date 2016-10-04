@@ -30,9 +30,9 @@ $(document).ready(function() {
   });
   // /поведение шапки при скролле
 
-  // маска для полей zip-кодов
-  $('._zip').inputmask("99999", {"placeholder": "_____"});
-  // /маска для полей zip-кодов
+  // // маска для полей zip-кодов
+  // $('._zip').inputmask("99999", {"placeholder": "_____"});
+  // // /маска для полей zip-кодов
 
   // шпионское меню со скроллом
   var lastId,
@@ -102,7 +102,7 @@ $(document).ready(function() {
     useAnimations: true,                // disables animations.
 
     easing: 'ease',                     // http://julian.com/research/velocity/#easing
-    speed: 350,                         // animation speed
+    speed: 550,                         // animation speed
     slideDelay: 0,                      // delay the animation
     perspective: 1200,                  // set 3D perspective
     transformOrigin: 'center top',      // set the center point of the 3d animation
@@ -156,12 +156,33 @@ $(document).ready(function() {
   });
 
 
-		$('.form-big').validate();
+		$('._fs').validate({
+      errorPlacement: function (error, element) {
+        return false;
+    }
+    });
 
 
+});
 
+$(document).ready(function() {
 
+  var owl = $("#owl-demo");
 
+  owl.owlCarousel({
+      singleItem: true,
+      slideSpeed: 1200,
+      lazyLoad: true,
+      navigation: false,
+      pagination: false
+  });
 
+  // Custom Navigation Events
+  $(".reviews__control--right").click(function(){
+    owl.trigger('owl.next');
+  });
+  $(".reviews__control--left").click(function(){
+    owl.trigger('owl.prev');
+  });
 
 });
