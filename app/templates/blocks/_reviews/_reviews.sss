@@ -64,7 +64,7 @@
     background-color: #ffffff
     box-shadow: 0 2px 13px 0 rgba(172, 172, 172, 0.5)
     width: 630px
-    height: 390px
+    min-height: 390px
     margin: 40px auto 40px
     position: relative
     z-index: 1
@@ -82,10 +82,12 @@
       position: relative
       &-box
         display: block
-        clear: fix
+        position: relative
         padding: 20px 40px
         .profile
-          float: left
+          position: absolute
+          top: 20px
+          left: 40px
           .photo,
           .info
             display: inline-block
@@ -93,8 +95,9 @@
           .info
             margin-left: 20px
         .rating
-          float: right
-          margin-top: -20px
+          position: absolute
+          top: 0
+          right: 40px
     ^&__text
       padding: 53px 40px 97px 40px
       display: block
@@ -106,3 +109,32 @@
         letter-spacing: 0.3px
         color: #336f96
         text-align: left
+
+@media screen and (max-width: 800px)
+  .reviews
+    padding-top: 40px
+    padding-bottom: 10px
+    &-list
+      margin-bottom: 40px
+    &__control
+      top: 89%
+      &--right
+        right: 40%
+      &--left
+        left: 40%
+    &-box
+      width: 268px
+    .reviews-box .reviews__header
+      width: 268px
+      height: 90px
+      .profile
+        top: 3px
+        left: 0
+        .photo
+          width: 80px
+        .info
+          margin-left: 8px
+          width: 170px
+      .rating
+        left: 62px
+        width: 33px

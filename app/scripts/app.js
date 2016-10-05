@@ -34,6 +34,12 @@ $(document).ready(function() {
   // $('._zip').inputmask("99999", {"placeholder": "_____"});
   // // /маска для полей zip-кодов
 
+  //
+  $('.close-icon').click(function(){
+    $('.header').toggleClass("header--ok").next();
+  });
+  // /
+
   // шпионское меню со скроллом
   var lastId,
       topMenu = $("#top-menu"),
