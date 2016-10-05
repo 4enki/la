@@ -108,14 +108,14 @@
       span
         transition-duration: 0s
         transition-delay: 0.2s
-      &:hover span
+      &&--active span
         background-color: rgba(0,0,0,0.0)
         transition-delay: 0.2s
       span:before
         transition-property: margin, transform
         transition-duration: 0.2s
         transition-delay: 0.2s, 0s
-      &:hover span:before
+      &&--active span:before
         margin-top: 0
         transform: rotate(45deg)
         transition-delay: 0s, 0.2s
@@ -123,19 +123,19 @@
         transition-property: margin, transform
         transition-duration: 0.2s
         transition-delay: 0.2s, 0s
-      &:hover span:after
+      &&--active span:after
         margin-top: 0
         transform: rotate(-45deg)
         transition-delay: 0s, 0.2s
 @media screen and (max-width: 600px)
   .header
-    height: 100vh
     background: transparent
     position: absolute
     top: 0
     left: 0
     &&--ok
       background: rgba(18, 50, 71,.95)
+      height: 100vh
       .header-box
         display: block!important
     &-box

@@ -384,7 +384,8 @@
   gulp.task('zip', function(cb) {
     return runSequence(
       'cleanup',
-      ['copy', 'include', 'styles', 'scripts'],
+      'copy',
+      ['include', 'styles', 'scripts'],
       'build-zip',
       'cleanup',
       cb
